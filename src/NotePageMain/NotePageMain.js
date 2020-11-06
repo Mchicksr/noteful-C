@@ -34,9 +34,9 @@ export default class NotePageMain extends React.Component {
         
       />
       <div className='NotePageMain__content'>
-        {note.note_content.split(/\n \r|\n/).map((para, i) =>
+        {note == null ? note.note_content.split(/\n \r|\n/).map((para, i) =>
           <p key={i}>{para}</p>
-        )}
+        ) : <></>}
       </div>
     </section>
   )
